@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+}
+
+body {
+  background-color: #ecf2f8;
+}
+
+section {
+  position: relative;
+  max-width: 1440px;
+  height: 100vh;
+  margin: auto;
+}
+
+.kartica {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  min-height: 250px;
+  max-width: 730px;
+  background-color: #fff;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.col1 {
+  background-image: url(/images/drawers.jpg);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 290px;
+  min-height: 280px;
+  overflow: hidden;
+  border-radius: 15px 0px 0px 15px;
+}
+
+.col2 {
+  margin: 35px 0px 0px 35px;
+}
+
+.col2 h1 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  padding-right: 60px;
+  max-width: 32ch;
+  color: #48556a;
+}
+
+.col2 p {
+  padding-right: 60px;
+  color: #6d7f97;
+  line-height: 1.6rem;
+}
+
+.col2 .osoba {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.col2 .osoba .mihaela {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.col2 .osoba .colosoba {
+  margin-left: 10px;
+}
+
+.col2 .osoba .colshare {
+  position: relative;
+}
+
+.col2 .osoba .share {
+  background-color: #ecf2f8;
+  padding: 10px;
+  border-radius: 50%;
+  margin-top: 5px;
+  margin-left: 145px;
+}
+
+.col2 .osoba .share:hover {
+  cursor: pointer;
+}
+
+.col2 .osoba .popup {
+  visibility: hidden;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: -75px;
+  margin-left: 55px;
+  position: absolute;
+  background-color: #48556a;
+  max-height: 50px;
+  max-width: 250px;
+  z-index: 10;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.col2 .osoba .popup p {
+  padding-left: 35px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 15px;
+  letter-spacing: 3px;
+  color: #9eafc2;
+}
+
+.col2 .osoba .popup .fab {
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.col2 .osoba .popup .fab:nth-child(4) {
+  padding-right: 35px;
+}
+
+.col2 .osoba .popup p:hover,
+.col2 .osoba .popup .fab:hover {
+  cursor: pointer;
+}
+
+.col2 .osoba .trokutic {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: #48556a transparent transparent transparent;
+  bottom: -10px;
+  margin-left: 95px;
+}
+
+.col2 .mobilepopup {
+  display: none;
+}
+
+@media screen and (max-width: 710px) {
+  .kartica {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .kartica .col1 {
+    min-width: 330px;
+    min-height: 200px;
+  }
+  .kartica .col2 {
+    margin-top: 35px;
+    margin-left: 0;
+  }
+  .kartica .col2 p {
+    margin-left: 35px;
+  }
+  .kartica .col2 h1 {
+    margin-left: 35px;
+  }
+  .kartica .col2 .mihaela {
+    margin-left: 35px;
+  }
+  .kartica .col1 {
+    border-radius: 15px 15px 0px 0px;
+  }
+  .kartica .colosoba {
+    margin-right: 60px;
+  }
+  .kartica .osoba {
+    position: relative;
+    margin-top: 35px;
+    margin-bottom: 15px;
+  }
+  .kartica .osoba p {
+    padding: 0;
+    margin-left: 0;
+  }
+  .kartica .col2 .osoba .share {
+    margin: 0;
+  }
+  .kartica .popup {
+    display: none;
+  }
+  .kartica .mobilepopup {
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 55px;
+    border-radius: 0px 0px 15px 15px;
+    background-color: #48556a;
+    margin-left: -85px;
+  }
+  .kartica .mobilepopup .socialpop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 15px;
+    margin-left: 40px;
+  }
+  .kartica .mobilepopup .socialpop p {
+    padding-right: 15px;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+  }
+  .kartica .mobilepopup .socialpop .fab {
+    padding-right: 15px;
+    font-size: 1.2rem;
+    color: white;
+  }
+  .kartica .share {
+    position: absolute;
+    bottom: -15px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,209 @@
+@import "./varijable";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+}
+body {
+  background-color: $pozadina;
+}
+section {
+  position: relative;
+  max-width: 1440px;
+  height: 100vh;
+  margin: auto;
+}
+.kartica {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 250px;
+  max-width: 730px;
+  background-color: #fff;
+  border-radius: 15px;
+  display: flex;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.col1 {
+  background-image: url(/images/drawers.jpg);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 290px;
+  min-height: 280px;
+  overflow: hidden;
+  border-radius: 15px 0px 0px 15px;
+}
+.col2 {
+  margin: 35px 0px 0px 35px;
+  h1 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    padding-right: 60px;
+    max-width: 32ch;
+    color: $header;
+  }
+  p {
+    padding-right: 60px;
+    color: $active;
+    line-height: 1.6rem;
+  }
+  .osoba {
+    align-items: center;
+    margin-top: 20px;
+    display: flex;
+    .mihaela {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+    .colosoba {
+      margin-left: 10px;
+    }
+    .colshare {
+      position: relative;
+    }
+    .share {
+      background-color: $pozadina;
+      padding: 10px;
+      border-radius: 50%;
+      margin-top: 5px;
+      margin-left: 145px;
+    }
+    .share:hover {
+      cursor: pointer;
+    }
+
+    .popup {
+      visibility: hidden;
+      border-radius: 10px;
+      display: flex;
+      top: -75px;
+      margin-left: 55px;
+      position: absolute;
+      background-color: $header;
+      max-height: 50px;
+      max-width: 250px;
+      z-index: 10;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+      align-items: center;
+      p {
+        padding-left: 35px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-right: 15px;
+        letter-spacing: 3px;
+        color: $paragraf;
+      }
+      .fab {
+        padding-right: 15px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        color: white;
+        font-size: 1.2rem;
+      }
+      .fab:nth-child(4) {
+        padding-right: 35px;
+      }
+
+      p:hover,
+      .fab:hover {
+        cursor: pointer;
+      }
+    }
+    .trokutic {
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 10px 10px 0 10px;
+      border-color: $header transparent transparent transparent;
+      bottom: -10px;
+      margin-left: 95px;
+    }
+  }
+  .mobilepopup {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 710px) {
+  .kartica {
+    flex-direction: column;
+    .col1 {
+      min-width: 330px;
+      min-height: 200px;
+    }
+    .col2 {
+      margin-top: 35px;
+      margin-left: 0;
+      p {
+        margin-left: 35px;
+      }
+      h1 {
+        margin-left: 35px;
+      }
+      .mihaela {
+        margin-left: 35px;
+      }
+    }
+    .col1 {
+      border-radius: 15px 15px 0px 0px;
+    }
+    .colosoba {
+      margin-right: 60px;
+    }
+    .osoba {
+      position: relative;
+      margin-top: 35px;
+      margin-bottom: 15px;
+    }
+    .osoba p {
+      padding: 0;
+      margin-left: 0;
+    }
+    .col2 .osoba .share {
+      margin: 0;
+    }
+    .popup {
+      display: none;
+    }
+    .mobilepopup {
+      display: block;
+      visibility: hidden;
+      position: absolute;
+      width: 100%;
+      height: 55px;
+      border-radius: 0px 0px 15px 15px;
+      background-color: $header;
+      margin-left: -85px;
+      .socialpop {
+        display: flex;
+        align-items: center;
+        margin-top: 15px;
+        margin-left: 40px;
+        p {
+          padding-right: 15px;
+          font-size: 1.2rem;
+          letter-spacing: 2px;
+        }
+        .fab {
+          padding-right: 15px;
+          font-size: 1.2rem;
+          color: white;
+        }
+      }
+    }
+    .share {
+      position: absolute;
+      bottom: -15px;
+    }
+  }
+}
